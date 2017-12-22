@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "quickmafs.h"
 int main() {
 	const char *question = "2+2-1";
