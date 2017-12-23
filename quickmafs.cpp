@@ -1,12 +1,12 @@
 #include<math.h>
 #include "quickmafs.h"
-char *outtext;
+char *quickmafs_buffer;
 char peek() {
-  return *outtext;
+  return *quickmafs_buffer;
 }
 
 char get() {
-  return *outtext++;
+  return *quickmafs_buffer++;
 }
 
 double expression();
@@ -67,7 +67,7 @@ double expression() //AS
   return result;
 }
 double evaluate(const char *expr) {
-  outtext = (char*)expr;
+  quickmafs_buffer = (char*)expr;
   double result = expression();
   return result;
 }

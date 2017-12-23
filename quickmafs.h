@@ -7,4 +7,4 @@ double expression();
 double expression();
 char get();
 char peek();
-extern char *outtext;
+extern char *quickmafs_buffer;
