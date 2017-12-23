@@ -1,4 +1,3 @@
-/* This file was automatically generated.  Do not edit! */
 double evaluate(const char *expr);
 double term();
 double exponent();
