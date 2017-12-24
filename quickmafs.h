@@ -2,6 +2,7 @@ double evaluate(const char *expr);
 double term();
 double exponent();
 double factor();
+double log();
 double number();
 double expression();
 double expression();
