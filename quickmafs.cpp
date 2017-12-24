@@ -95,3 +95,4 @@ double evaluate(const char *expr) {
 	double result = expression();
 	return result;
 }
+// SREE WE NEED TO FIGURE OUT PI ITS NOT GOING TO BE HARD BUT PI IS PART OF KEYMAP
