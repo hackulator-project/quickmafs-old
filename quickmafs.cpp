@@ -57,6 +57,9 @@ double term() //MD
   return result;
 }
 
+double trig() //trig functions sin, cos, tan
+{
+  double result = 
 double log()
 {
   double result = exponent();
