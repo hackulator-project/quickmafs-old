@@ -1,9 +1,0 @@
-#include <stdio.h>
-#include "quickmafs.h"
-int main() {
-	char *question = (char*)malloc(512);
-	printf(">>> ");
-	scanf("%s", question);
-	printf("%f\n", evaluate(question));
-	return 0;
-}
