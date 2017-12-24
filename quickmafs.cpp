@@ -61,7 +61,7 @@ double trig() //trig functions sin, cos, tan
 {
 	double result = term();
 	while (peek() == "sin" || peek() == "cos" || peek() = "tan")
-		if (get() == "sin")
+        if (get() == "sin")
             result = sin (term());
         if (get() == "cos")
             result = cos (term());
