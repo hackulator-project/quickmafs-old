@@ -12,9 +12,9 @@ char get() {
 double expression();
 
 double number() {
-  double result = get() - '0';
-  while (peek() >= '0' && peek() <= '9') {
-    result = 10*result + get() - '0';
+  double result = get() - '0'; //convert to number
+  while (peek() >= '0' && peek() <= '9') { //is it a number
+    result = 10*result + get() - '0'; //convert to number and put to end
   }
   return result;
 }
