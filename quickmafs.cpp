@@ -48,7 +48,7 @@ double exponent() { //E
 }
 double term() //MD
 {
-	double result = exponent();
+	double result = log();
 	while (peek() == '*' || peek() == '/' || peek() == 'a')
 		if (get() == '*')
 			result *= exponent();
