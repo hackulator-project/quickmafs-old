@@ -63,7 +63,7 @@ double trig() //trig functions sin, cos, tan
 double log()
 {
   double result = exponent();
-  if (peek() == 'log')
+  if (peek() == "log")
     result = log (result, exponent());
     return result; 
 }
