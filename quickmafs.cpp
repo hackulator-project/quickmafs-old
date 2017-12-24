@@ -1,4 +1,4 @@
-#include<math.h>
+#include <math.h>
 #include "quickmafs.h"
 char *quickmafs_buffer;
 char peek() {
@@ -12,9 +12,9 @@ char get() {
 double expression();
 
 double number() {
-  double result = get() - '0'; //convert to number
-  while (peek() >= '0' && peek() <= '9') { //is it a number
-    result = 10*result + get() - '0'; //convert to number and put to end
+  double result = get() - '0';
+  while (peek() >= '0' && peek() <= '9') {
+    result = 10*result + get() - '0';
   }
   return result;
 }
@@ -39,9 +39,10 @@ double exponent() { //E
   double result = factor();
   while(peek() == '^' || peek() == 'r') {
     if(get() == '^')
-      result = pow(result, factor());
+      result = pow (result, factor());
     if(get() == 'r')
-      result = pow(factor(), 1/result); // 3r27 becomes 27 to the power of 1/3
+      result = pow (factor(), 1/result); // 3r27 becomes 27 to the power of 1/3
+      return result;
 
   }
 }
@@ -56,6 +57,13 @@ double term() //MD
   return result;
 }
 
+double log()
+{
+  double result = exponent();
+  if (peek() == 'log')
+    result = log (result, exponent());
+    return result; 
+}
 double expression() //AS
 {
   double result = term();
