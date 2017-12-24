@@ -48,7 +48,7 @@ double exponent() { //E
 }
 double term() //MD
 {
-	double result = log();
+	double result = logarithm();
 	while (peek() == '*' || peek() == '/' || peek() == 'a')
 		if (get() == '*')
 			result *= exponent();
@@ -62,14 +62,24 @@ double trig() //trig functions sin, cos, tan
 	double result = term();
 	while (peek() == "sin" || peek() == "cos" || peek() = "tan")
 		if (get() == "sin")
-double log()
-{
-	double result = exponent();
-	if (peek() == "log")
-		result = log (result, exponent());
-		return result; 
+            result = sin (term());
+        if (get() == "cos")
+            result = cos (term());
+        if (get() == "tan")
+            result = tan (term());
+    return result;
 }
-//ANI PLZ CHECK HANGOUTS
+double logarithms() //Natural logarithms (ln) and normal logarithms
+{
+    double result = exponent()
+    while (peek() == "ln" || peek() == "log")
+        if (get == "ln")
+            result = log (exponent());
+        if (get == "log")
+            result = pow (exponent(), 1/result);
+    return result;
+}
+
 double expression() //AS
 {
 	double result = term();
